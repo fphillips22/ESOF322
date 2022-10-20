@@ -3,3 +3,7 @@
 3. The system shall compare cold case data with new dna samples.
 4. The system shall assign a number value to each dna sample.
 5. The website shall represent data from the database with graphs.
+
+I like these requirements, I just wanna talked about requirement 4. I don't know if we'd be able
+to make the system be automated to assign a value to each dna sample. My thoughts were that the "DNA" would
+just be some random number we come up with just to show it comparing data.

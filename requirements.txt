@@ -5,3 +5,6 @@
 5. The website shall represent data from the database with graphs.
 
 Just need to add some front end reqs
+Fletcher and Megan - Website/Database. Probably need to fix the manage.py stuff and the database connections
+William - Data manipulation and latex
+Jake - Excel sheet and matplotlib to represent our data

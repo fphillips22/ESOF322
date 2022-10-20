@@ -1,8 +1,8 @@
-1. The database shall store cold case data.
-2. The system shall allow the admin to insert and delete data from the database.
-3. The system shall compare cold case data with new dna samples.
-4. The system shall assign a number value to each dna sample.
-5. The website shall represent data from the database with graphs.
+1. The database shall store cold case data. - Fletcher
+2. The system shall allow the admin to insert and delete data from the database. - Fletcher and Megan
+3. The system shall compare cold case data with new dna samples. - William
+4. The system shall assign a number value to each dna sample. - William
+5. The website shall represent data from the database with graphs. - Jake and Megan
 
 Just need to add some front end reqs
 Fletcher and Megan - Website/Database. Probably need to fix the manage.py stuff and the database connections

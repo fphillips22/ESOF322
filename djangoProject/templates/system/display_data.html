@@ -1,0 +1,22 @@
+{% extends "journal/base.html" %}
+{% load humanize %}
+{% block content %}
+<h2>MY JOURNALS</h2>
+<a href="datacreate"><button class="btn btn-primary" type = "submit">Add a New Journal</button></a>
+<div>
+   {% for journal in journal_list %}
+   <div class="list-group">
+      <a href="" class = "list-group-item list-group-item-action flex-column align-items-start">
+        <form style="display: inline" action="dataupdate.id" method="get">
+            <button> Click to edit </button>
+          </form>
+         <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ journal.title }}</h5>
+            <small>{{ system.date_created|naturaltime }}</small>
+         </div>
+         <p class="mb-1">{{ journal.description| truncatechars:120}}</p>
+      </a>
+   </div>
+   {% endfor %}
+   {% endblock %}
+</div>

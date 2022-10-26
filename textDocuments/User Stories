@@ -1,0 +1,20 @@
+User Stories
+
+Definitions:
+Website user: A front end user, lacking domain and data science knowledge, traversing the web system.
+Database Engineer: An individual knowledgable of how the system works and responsible for maintenance and updates.
+
+Megan:
+
+As a website user, I want an organized and functional navigation bar so that I can access information.
+
+Jake:
+As a website user, I would like to have access to different type of visual diagrams so that I can better understand the data provided.
+
+Will
+As a website user, I need the processing of new data to find important features and calculating relevant statistics to be done automatically, so it is friendly to someone that is not a data scientist.
+As a website user, I want a data visualization technique that is intuitive and accurately shows patterns in the data.
+
+Fletcher:
+As a database engineer, I want to have a database so that I can store cold cases inside of it.
+As a database engineer, I want to have the data be manipulated so that the admin can insert and delete data from the database.

@@ -1,5 +1,5 @@
 Front End/Visualization:
-1. The website shall represent statistics from the database with graphs. - Jake and Megan
+1. The website shall represent statistics from the database with graphs. - Jake
 2. The website shall have an explorable graphical databases that visualizes connections in data - Will and Jake
 
 Database:

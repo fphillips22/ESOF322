@@ -68,8 +68,9 @@
 
 \begin{figure}[!ht]
 \centering
-\textbf{Author: William Jardee}
-	\includegraphics[width=.95\textwidth]{./UseCases/jardee_usecase}\\
+\textbf{Author: William Jardee}\\
+\textit{It should be noted that while William created this iteration of a UseCase Diagram, it is the combination of numerous individual diagrams made by each member of the group.}
+	\includegraphics[width=.95\textwidth]{./UseCases/jardee_usecase_2}\\
 	\caption{UseCase Diagram for the Cold-Cases Database system.}
 	\label{fig:usecase_diagram}
 \end{figure}
@@ -78,6 +79,40 @@
 
 
 \subsection{Textual Descriptions}
+
+%------------------------------------
+%Search - Navigation Menu
+%------------------------------------
+\begin{table}[!ht]
+\begin{center}
+\textbf{Author: Megan Steinmasel}
+\vspace*{1em}
+
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & Search - Navigation Menu\\\hline
+	Description: & Allows for the access of information based on a search bar and the navigation to prebuilt pages and groups. The bulk of the exploration and traversal of the website will be done with this usecase until an analysis is ready to be done; then the ``Run Analysis" should be used.\\\hline
+	Related Requirements:& \hyperlink{us1}{User Story 1}\\\hline
+	Preconditions:& The user has successfully logged onto the website.\\\hline
+	Successful end condition:& Successful display of the navigation and search menu. Successful search/redirection.\\\hline
+	Failed end condition:& Links in navigation menu do not work. Navigation menu is not displayed. Search is not achievable. \\\hline
+	Actors:& Website User\\\hline
+	Basic Flow of Events: & \begin{enumerate}
+	\item Actor clicks the drop-down menu.
+	\item Drop-down menu opens.
+	\item Actor types in keywords to the search bar and clicks enter or selects a page to navigate to.
+	\item System will process request and display the appropriate query/page.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}
+	\item An error is recognized.
+	\item System notifies actor of error.
+	\item System requests a refresh from the actor, which reboots the system and tries again.
+	\end{enumerate}
+\end{tabular}
+\label{des:search_nav_menu}	
+\end{center}
+\end{table}
+%------------------------------------
+
 
 %------------------------------------
 %Create Database
@@ -100,7 +135,7 @@
 	\item Connect a database to the web framework.
 	\item Insert Initial Data into Database.
 	\end{enumerate}\\\hline
-	Extensions/Exceptional Flow of Events & \begin{enumerate}
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}
 	\item Database fails to build properly.
 	\item The engineer is notified that an error has appeared.
 	\item Write to log file.
@@ -134,7 +169,7 @@
 	\item Success/Fail state is determined.
 	\item Flow is complete and prompts the user for the next action.
 	\end{enumerate}\\\hline
-	Extensions/Exceptional Flow of Events & \begin{enumerate}
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}
 	\item Conflict happens.
 	\item Reject any attempted changes and revert to the last viable state.
 	\item Notify the actor that there has been an error and write to the log file.
@@ -168,7 +203,7 @@
 	\item The type of visualization is selected from a dropdown menu.
 	\item The request is sent to the ``Visualize Results via Graph" action.
 	\end{enumerate}\\\hline
-	Extensions/Exceptional Flow of Events & \begin{enumerate}
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}
 	\item One of the system-side error states was reached.
 	\item Report the error to the actor.
 	\item Write error to log file.
@@ -202,7 +237,7 @@
 	\item The website user chooses to view graphs via the drop-down menu.
 	\item The system will display any applicable graphs.
 	\end{enumerate}\\\hline
-	Extensions/Exceptional Flow of Events & \begin{enumerate}
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}
 	\item The graphs fail to display.
 	\item The User is notified that the user cannot access graphs via a notification.
 	\item Write to log file.
@@ -235,7 +270,7 @@
 	\item Write to file recent activity.
 	\item Flag any invalid actions prompt ``write to log file."
 	\end{enumerate}\\\hline
-	Extensions/Exceptional Flow of Events & \begin{enumerate}
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}
 	\item Notify the system admin of the issue and include error information.
 	\item Terminate all systems until the issue is resolved.
 	\end{enumerate}

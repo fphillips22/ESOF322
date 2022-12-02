@@ -27,10 +27,10 @@
 
 
 %\usepackage{fontspec}
-% Use this line to change the font of your file. If you have the Open Dyslexic v. 1 downloaded (bold-italic- bolditalics included) you can use this line. This font addresses Dyslexic peoples. 
+% Use this line to change the font of your file. If you have the Open Dyslexic v. 1 downloaded (bold-italic- bolditalics included), you can use this line. This font addresses Dyslexic people. 
 %\setmainfont{OpenDyslexic}
-% Use this line to change the font of your file. If you have the Atkinson Hyperlegible downloaded (bold-italic- bolditalics included) you can use this line. This font addresses sight-impared peoples
-% \setmainfont{Atkinson Hyperlegible}
+% Use this line to change the font of your file. If you have the Atkinson Hyperlegible downloaded (bold-italic- bolditalics included), you can use this line. This font addresses sight-impaired peoples
+ %\setmainfont{Atkinson Hyperlegible}
 
 \begin{document}
 
@@ -40,9 +40,9 @@
 
 
 %%TO-DO
-% check for any implementation in usecases
 
-\textbf{System Description}: In the world of criminal justice, it is not a rare occurrence that the truth is thinly veiled by a lack of gathered evidence or proper techniques to analyze current data. A prime example of this is the aid of DNA testing in prosecution. The proposed software system will collect old and new evidence into one database (centralized storage system), organize it, and present it to domain specialists through an easy-to-use website. The initial construction of this project is humble but aims to create a skeleton for more sophisticated analysis techniques to be built on. It is assumed that there are two primary ways to interact with the system: through control of the database operations and in the form of the website; these are the database engineer and website user, respectively.\vspace{1.5em}
+
+\textbf{System Description}: In the world of criminal justice, it is not a rare occurrence that the truth is thinly veiled by a lack of gathered evidence or proper techniques to analyze current data. A prime example of this is the aid of DNA testing in prosecution. The proposed software system will collect old and new evidence into one database (a centralized storage system), organize it, and present it to domain specialists through an easy-to-use website. The initial construction of this project is humble but aims to create a skeleton for more sophisticated analysis techniques to be built on. It is assumed that there are two primary ways to interact with the system: through control of the database operations and in the form of the website; these are the database engineer and website user, respectively.\vspace{1.5em}
 
 \textit{Database Engineer}: An individual knowledgeable of how the system works and responsible for maintenance and updates.\vspace{0.5em}
 
@@ -78,7 +78,7 @@
 \begin{figure}[!ht]
 \centering
 \textbf{Author: William Jardee}\\
-\textit{It should be noted that while William created this iteration of a UseCase Diagram, it is the combination of numerous individual diagrams made by each member of the group.}\vspace{0.5em}
+\textit{It should be noted that while William created this iteration of a UseCase Diagram, it is the combination of numerous individual diagrams made by each group member.}\vspace{0.5em}
 
 	\includegraphics[width=.95\textwidth]{./UseCases/jardee_usecase_3}\\
 	\caption{UseCase Diagram for the Cold-Cases Database system.}
@@ -100,7 +100,7 @@
 
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Search Database\\\hline
-	Description: & Search bar scans keywords through the database so that the Website User can find a desired query/page.\\\hline
+	Description: & Search bar scans keywords through the database so the Website User can find a desired query/page.\\\hline
 	Related Requirements:& \hyperlink{us1}{User Story 1}\\\hline
 	Preconditions:& The user has successfully logged onto the website.\\\hline
 	Successful end condition:& Successful display of search bar and successful redirection.\\\hline
@@ -108,15 +108,15 @@
 	Actors:& Website User\\\hline
 	Basic Flow of Events: & \begin{enumerate}
 	\item Actor types in keywords to the search bar and clicks enter or selects a page to navigate to.
-	\item Request is processed and database is searched.
+	\item Request is processed, and the database is searched.
 	\item The appropriate query/page is displayed.
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \begin{enumerate}
-	\item An error is recognized: search bar is not displayed and/or failed redirection.
+	\item An error is recognized: the search bar is not displayed and/or failed redirection.
 	\item Actor is notified of an error.
 	\item Log data.
 	\item The Actor is prompted for a refresh of the webpage.
-	\item When refresh button is pressed, system reboots and tries again.
+	\item When the refresh button is pressed, the system reboots and tries again.
 	\end{enumerate}
 \end{tabular}
 \label{des:search_nav_menu}	
@@ -138,8 +138,8 @@
 	Description: & The database that contains all the data will be maintained. This included initial creation, implementation of new features, and regular maintenance.\\\hline
 	Related Requirements:& \hyperlink{us4}{User Story 4}\\\hline
 	Preconditions:& Basic web infrastructure has been created. A small sample set of cold cases is ready to be inserted. The current actor has the proper credentials.\\\hline
-	Successful end condition:& The database is able to be manipulated in the desired manner.\\\hline
-	Failed end condition:& Requested changed cannot be done.\\\hline
+	Successful end condition:& The database can be manipulated in the desired manner.\\\hline
+	Failed end condition:& Requested change cannot be done.\\\hline
 	Actors:& Database Engineer\\\hline
 	Basic Flow of Events: & \begin{enumerate}
 	%THIS IS TOO TECHNICAL

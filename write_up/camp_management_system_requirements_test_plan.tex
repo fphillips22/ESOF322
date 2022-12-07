@@ -1,0 +1,305 @@
+%Building
+\documentclass[11pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% Math/Greek packages
+\usepackage{amssymb, amsmath, amsthm, mathtools, esint} 
+\usepackage{algorithm, algorithmic}
+\usepackage{upgreek}
+\usepackage{physics}
+
+% Graphics/Presentation packages
+\usepackage{graphicx}
+\usepackage{multirow, subcaption, cleveref}
+\usepackage{tabulary, enumitem}
+\usepackage{cancel}
+\usepackage{float}	% better float control. Using the placement [H] instead of [!ht] for figures
+
+%replace "ref" with "cref", "Cref", "crefrange"
+
+% Misc packages
+\renewcommand\qedsymbol{\textit{``Quack"}} %change the QED symbol to ``Quack" for the inside joke of Quantum Entangled Ducks
+
+% defining where the images are
+\graphicspath{ {../ESOF 322 Project (drive copy)/} }
+
+
+%\usepackage{fontspec}
+% Use this line to change the font of your file. If you have the Open Dyslexic v. 1 downloaded (bold-italic- bolditalics included), you can use this line. This font addresses Dyslexic people. 
+%\setmainfont{OpenDyslexic}
+% Use this line to change the font of your file. If you have the Atkinson Hyperlegible downloaded (bold-italic- bolditalics included), you can use this line. This font addresses sight-impaired peoples
+ %\setmainfont{Atkinson Hyperlegible}
+
+\begin{document}
+
+\title{ESOF 322: Project 2 - Camp Management System; Test Plan}
+\author{Jacob Coleman, William Jardee, Fletcher Philips, Megan Steinmasel}
+\maketitle
+
+
+%%TO-DO intro structure
+%		user stories
+%		use cases
+
+
+\section*{Test Plan}
+
+This is the Test Plan for the Camp Management System provided. Since there are 13 usecases, we have opted to only write test plans for eight of them; two by each group member. All relevant information about the usecases can be see in \cref{appendix:camp_sys}.
+
+% add intro, objectives, features, technique
+
+
+%------------------------------------
+% Fletcher's Test Cases
+%------------------------------------
+\subsection*{Test Suite 1: Messaging System}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & \\\hline
+	Author: & \\\hline
+	Summary: &  \\\hline
+	Related Requirements:& \\\hline
+	Preconditions:& \\\hline
+	Test Script/Procedure: & \begin{enumerate}
+	\item $\cdot$
+	\end{enumerate}\\\hline
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & \\\hline
+	Author: & \\\hline
+	Summary: &  \\\hline
+	Related Requirements:& \\\hline
+	Preconditions:& \\\hline
+	Test Script/Procedure: & \begin{enumerate}
+	\item $\cdot$
+	\end{enumerate}\\\hline
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+
+
+%------------------------------------
+% Megan's Test Cases
+%------------------------------------
+\subsection*{Test Suite 2: View Camper Information}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
+	ID: & TC03\\\hline
+	Name: & Search Campers Test \\\hline
+	Author: & Megan Steinmasel\\\hline
+	Summary: &  \\\hline
+	Related \hspace{5em} Requirements:& ``View Camper" - Search Campers Use Case\\\hline
+	Preconditions:& \begin{enumerate}
+		\item Camper and parent information is submitted into the system.
+		\item Camper and parent information is accessible from search.
+	\end{enumerate}\\\hline
+	Test Script/ Procedure: & \begin{enumerate}
+	\item Navigate to search option.
+	\item Enter search term (this is defined per test) into search bar.
+	\item Click enter.
+	\end{enumerate}\\\hline
+	Test Data & \begin{itemize}
+	\item Camper: ``Max Johnson" with Parent: ``Jane Williams".
+	\end{itemize}
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.13\linewidth}|p{0.20\linewidth}|p{0.20\linewidth}|p{0.30\linewidth}}
+	Test Case \# & Test Data & Expected Result & Summary\\\hline
+	TC03-01 & Camper first name: ``Max" & Relevant camper is displayed & Verifies a valid camper's first name is searchable and their information is displayed correctly.\vspace*{1em}\\
+	TC03-02 & Camper last name: ``Johnson" & Relevant camper is displayed & Verifies a valid camper's last name is searchable and their information is displayed correctly.\vspace*{1em}\\	
+	TC03-03 & Camper first and last name: ``Max Johnson" & Relevant camper is displayed & Verifies a valid camper's first and last name is searchable and their information is displayed correctly.\vspace*{1em}\\
+	TC03-04 & Parent first name: ``Jane" & Relevant parent is displayed & Verifies a valid parent's first name is searchable and their information is displayed correctly.\vspace*{1em}\\
+	TC03-05 & Parent last name: ``Williams" & Relevant parent is displayed & Verifies a valid parent's last name is searchable and their information is displayed correctly.\vspace*{1em}\\
+	TC03-06 & Camper first and last name: ``Jane Williams" & Relevant parent is displayed & Verifies a valid parent's first and last name is searchable and their information is displayed correctly.\vspace*{1em}\\
+	TC03-07 & First name: ``ffjbvl" & No campers/parents are displayed & Verifies an invalid first name displays no result.\vspace*{1em}\\
+	TC03-08 & Last name: ``cfgkp" & No campers/parents are displayed & Verifies an invalid last name displays no result.\vspace*{1em}\\
+	TC03-09 & First and last name: ``ffjbvl cfgkp" & No campers/parents are displayed & Verifies an invalid first or last name displays no result.\\
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
+	ID: & TC04\\\hline
+	Name: & Sort Campers \\\hline
+	Author: & Megan Steinmasel\\\hline
+	Summary: &  \\\hline
+	Related \hspace{5em} Requirements:& ``View Camper" - Sort Campers Use Case\\\hline
+	Preconditions:& \begin{enumerate}
+		\item Camper and parent information (name, allergies, camp, account balance, age) is submitted into the system.
+		\item Camper and parent information is accessible for sorting.
+	\end{enumerate}\\\hline
+	Test Script/ Procedure: & \begin{enumerate}
+	\item Navigate to sort option.
+	\item Select a category of camper information to sort by.
+	\item Click enter.
+	\end{enumerate}\\\hline
+	Test Data & \begin{itemize}
+	\item A full dichotomy of the following character sets (324 entries total):
+	
+	name $\rightarrow$ $\{$Alex Doe, Alex Smith$\}$	
+	
+	allergies $\rightarrow$ $\{$None, peanuts, gluten, misc$\}$	
+	
+	camp $\rightarrow$ $\{$Camp 1, Camp 2, Camp 3$\}$
+	
+	account balance $\rightarrow$ $\{$\$0, \$0.12, \$10$\}$
+	
+	age $\rightarrow$ $\{$7, 12, 17$\}$
+	\end{itemize}
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.13\linewidth}|p{0.20\linewidth}|p{0.20\linewidth}|p{0.30\linewidth}}
+	Test Case \# & Sort Category & Expected Result & Summary\\\hline
+	TC04-01 & Name & Campers are sorted alpha-numerically by name & Verifies sorting is valid and completed for the name category.\vspace*{1em}\\
+	TC04-02 & Allergies & Campers are sorted alpha-numerically by allergies & Verifies sorting is valid and completed for the allergies category.\vspace*{1em}\\	
+	TC04-03 & Camp & Campers are sorted alpha-numerically by camp & Verifies sorting is valid and completed for the camp category.\vspace*{1em}\\
+	TC04-04 & Account Balance & Campers are sorted numerically by payments & Verifies sorting is valid and completed for the payments category.\vspace*{1em}\\
+	TC04-05 & Age & Campers are sorted numerically by age & Verifies sorting is valid and completed for the age category.\vspace*{1em}\\
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+%------------------------------------
+% Will's Test Cases
+%------------------------------------
+\subsection*{Test Suite 3: View Schedule}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & \\\hline
+	Author: & \\\hline
+	Summary: &  \\\hline
+	Related Requirements:& \\\hline
+	Preconditions:& \\\hline
+	Test Script/Procedure: & \begin{enumerate}
+	\item $\cdot$
+	\end{enumerate}\\\hline
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & \\\hline
+	Author: & \\\hline
+	Summary: &  \\\hline
+	Related Requirements:& \\\hline
+	Preconditions:& \\\hline
+	Test Script/Procedure: & \begin{enumerate}
+	\item $\cdot$
+	\end{enumerate}\\\hline
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+%------------------------------------
+% Jacob's Test Cases
+%------------------------------------
+\subsection*{Test Suite 4: Attendance Tracking}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & \\\hline
+	Author: & \\\hline
+	Summary: &  \\\hline
+	Related Requirements:& \\\hline
+	Preconditions:& \\\hline
+	Test Script/Procedure: & \begin{enumerate}
+	\item $\cdot$
+	\end{enumerate}\\\hline
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & \\\hline
+	Author: & \\\hline
+	Summary: &  \\\hline
+	Related Requirements:& \\\hline
+	Preconditions:& \\\hline
+	Test Script/Procedure: & \begin{enumerate}
+	\item $\cdot$
+	\end{enumerate}\\\hline
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+\clearpage
+
+\appendix
+\section{Camp Management System}\label{appendix:camp_sys}
+\subsection{User Stories}
+% TODO only the user stories of interest
+\subsection{Use Cases}
+% TODO only the use cases that we used
+
+
+\begin{table}[!htb]
+\begin{center}
+\textbf{Author: Megan Steinmasel}
+\vspace*{1em}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & Search Database\\\hline
+	Description: & Search bar scans keywords through the database so the Website User can find a desired query/page.\\\hline
+	Related Requirements:& \hyperlink{us1}{User Story 1}\\\hline
+	Preconditions:& The user has successfully logged onto the website.\\\hline
+	Successful end condition:& Successful display of search bar and successful redirection.\\\hline
+	Failed end condition:& Search bar is not displayed or failed redirection. \\\hline
+	Actors:& Website User\\\hline
+	Basic Flow of Events: & \begin{enumerate}
+	\item Actor types in keywords to the search bar and clicks enter or selects a page to navigate to.
+	\item Request is processed, and the database is searched.
+	\item The appropriate query/page is displayed.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}
+	\item An error is recognized: the search bar is not displayed and/or failed redirection.
+	\item Actor is notified of an error.
+	\item Log data.
+	\item The Actor is prompted for a refresh of the webpage.
+	\item When the refresh button is pressed, the system reboots and tries again.
+	\end{enumerate}
+\end{tabular}
+\label{des:}	
+\end{center}
+\end{table}
+
+
+\end{document}

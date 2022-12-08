@@ -55,17 +55,17 @@
 
 \section*{Test Plan}
 
-This is the Test Plan for the Camp Management System provided. Since there are 13 usecases, we have opted to only write test plans for eight of them; two by each group member. All relevant information about the usecases can be see in \cref{appendix:camp_sys}, and to increase readability the summary for each test case explains how it is related to the requirement and there is a link to the relevant use case/requirement(s).
+This is the Test Plan for the Camp Management System provided. Since there is thirteen usecases total, we have opted to write only eight test plans, two by each group member. All relevant information about the usecases can be seen in \cref{appendix:camp_sys}, and to increase readability, the summary for each test case explains how it is related to the requirement, and there is a link to the relevant use case/requirement(s).
 
 \subsection*{Introduction}
 The Camp Management System aims to serve as the connecting force that organizes how counselors, parents, and campers communicate information. The main structure of the system can be boiled down into four requirements:
 \begin{enumerate}
-	\item A way to track attendance,
-	\item View Camper information,
-	\item Create and view schedule, and
-	\item Send a message to parents.
+	\item a way to track attendance,
+	\item view Camper information,
+	\item create and view schedule, and
+	\item send a message to parents.
 \end{enumerate}
-The small subset of testing we show here will all be done using Functional Black-Box testing. That is, only testing that the the transformation of ``Input $\mapsto$ Output" is correct. The main testing techniques used are:
+The small subset of testing we show here will all be done using Functional Black-Box testing. That is, only testing that the transformation of ``Input $\mapsto$ Output" is correct. The main testing techniques used are:
 \begin{enumerate}
 	\item Equivalence Partitioning (TC03: \cref{TC03}, TC04: \cref{TC04}, TC05: \cref{TC05}, TC06: \cref{TC06}, TC07: \cref{TC07}, TC08: \cref{TC08}),
 	\item Boundary Value Analysis (TC04: \cref{TC04}, TC05: \cref{TC05}, TC06: \cref{TC06}),
@@ -98,9 +98,9 @@ The small subset of testing we show here will all be done using Functional Black
 		\item Parent's contact information is in the system.
 	\end{enumerate}\\\hline
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
-		\item Choose messaging system.
-		\item Create message to send.
-		\item Send message.
+		\item Choose a messaging system.
+		\item Create a message to send.
+		\item Sena d message.
 		\item Confirmation receipt is sent.
 	\end{enumerate}\\\hline
 	Test Data & 
@@ -114,7 +114,7 @@ The small subset of testing we show here will all be done using Functional Black
 	Test Case \# & Messaging System & Expected Result & Summary\\\hline
 	TC01-01 & Text & Text message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via text.\vspace*{1em}\\\hline
 	TC01-02 & Email & Email message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via email.\vspace*{1em}\\	\hline
-	TC01-03 & In-app messaging & In-app message message irs received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
+	TC01-03 & In-app messaging & In-app messages are received by a counselor or staff member, and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 \clearpage
@@ -135,9 +135,9 @@ The small subset of testing we show here will all be done using Functional Black
 		\item Parent has created a profile.
 	\end{enumerate}\\\hline
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
-		\item Choose messaging system.
+		\item Choose a messaging system.
 		\item Create the message.
-		\item Send Message
+		\item Send message
 	\end{enumerate}\\\hline
 	Test Data &
 \end{tabular}
@@ -149,8 +149,8 @@ The small subset of testing we show here will all be done using Functional Black
 	\hline
 	Test Case \# & Messaging System & Expected Result & Summary\\\hline
 	TC02-01 & Text & Text message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via text.\vspace*{1em}\\\hline
-	TC02-02 & Email & Email mesage received by counselor osr staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via email. \vspace*{1em}\\	\hline
-	TC02-03 & In-app messaging & In-app messaging message is received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
+	TC02-02 & Email & Email message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via email. \vspace*{1em}\\	\hline
+	TC02-03 & In-app messaging & In-app messaging message is received by counselor or staff member, and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 \clearpage
@@ -169,18 +169,18 @@ The small subset of testing we show here will all be done using Functional Black
 	ID: & TC03\\\hline
 	Name: & Search Campers Test \\\hline
 	Author: & Megan Steinmasel\\\hline
-	Summary: & Given the search functionality in the system, it must be searchable for any components that make up a campers or parents name, returning entries that are related. \\\hline
+	Summary: & Given the search functionality in the system, it must be searchable for any components that make up a campers or parents name, returning related entries. \\\hline
 	Related \hspace{5em} Requirements:& Search Campers (\cref{des:search campers}); \hyperlink{Req2}{Req 2}, \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt]
-		\item Camper and parent information is submitted into the system.
-		\item Camper and parent information is accessible from search.
+		\item Camper and parent information are submitted into the system.
+		\item Camper and parent information are accessible from search.
 	\end{enumerate}\\\hline
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
-	\item Navigate to search option.
-	\item Enter search term (this is defined per test) into search bar.
+	\item Navigate to the search option.
+	\item Enter the search term (this is defined per test) into the search bar.
 	\item Click enter.
 	\end{enumerate}\\\hline
-	Test Data & Camper: ``Max Johnson" with Parent: ``Jane Williams".
+	Test Data & Camper: ``Max Johnson" with Parent: ``Jane Williams."
 \end{tabular}
 \end{center}
 \end{table}
@@ -189,12 +189,12 @@ The small subset of testing we show here will all be done using Functional Black
 \begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
 	\hline 
 	Test Case \# & Test Data & Expected Result & Summary\\\hline
-	TC03-01 & Camper first name: ``Max" & Relevant camper is displayed & Verifies a valid camper's first name is searchable and their information is displayed correctly.\vspace*{1em}\\\hline
-	TC03-02 & Camper last name: ``Johnson" & Relevant camper is displayed & Verifies a valid camper's last name is searchable and their information is displayed correctly.\vspace*{1em}\\	\hline
-	TC03-03 & Camper first and last name: ``Max Johnson" & Relevant camper is displayed & Verifies a valid camper's first and last name is searchable and their information is displayed correctly.\vspace*{1em}\\\hline
-	TC03-04 & Parent first name: ``Jane" & Relevant parent is displayed & Verifies a valid parent's first name is searchable and their information is displayed correctly.\vspace*{1em}\\\hline
-	TC03-05 & Parent last name: ``Williams" & Relevant parent is displayed & Verifies a valid parent's last name is searchable and their information is displayed correctly.\vspace*{1em}\\\hline
-	TC03-06 & Camper first and last name: ``Jane Williams" & Relevant parent is displayed & Verifies a valid parent's first and last name is searchable and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-01 & camper first name: ``Max" & Relevant camper is displayed & Verifies a valid camper's first name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-02 & camper last name: ``Johnson" & Relevant camper is displayed & Verifies a valid camper's last name is searchable, and their information is displayed correctly.\vspace*{1em}\\	\hline
+	TC03-03 & camper first and last name: ``Max Johnson" & Relevant camper is displayed & Verifies a valid camper's first and last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-04 & Parent first name: ``Jane" & Relevant parent is displayed & Verifies a valid parent's first name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-05 & Parent last name: ``Williams" & Relevant parent is displayed & Verifies a valid parent's last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-06 & camper first and last name: ``Jane Williams" & Relevant parent is displayed & Verifies a valid parent's first and last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
 	TC03-07 & First name: ``ffjbvl" & No campers/parents are displayed & Verifies an invalid first name displays no result.\vspace*{1em}\\\hline
 	TC03-08 & Last name: ``cfgkp" & No campers/parents are displayed & Verifies an invalid last name displays no result.\vspace*{1em}\\\hline
 	TC03-09 & First and last name: ``ffjbvl cfgkp" & No campers/parents are displayed & Verifies an invalid first or last name displays no result.\\\hline
@@ -211,14 +211,14 @@ The small subset of testing we show here will all be done using Functional Black
 	ID: & TC04\\\hline
 	Name: & Sort Campers \\\hline
 	Author: & Megan Steinmasel\\\hline
-	Summary: & Given the sorting functionality in the system, it must be diviable for any components that make up a camper's characteristics: name, allergies, camp attending, payment/account balance, age. \\\hline
+	Summary: & Given the sorting functionality in the system, it must be dividable for any components that make up a camper's characteristics: name, allergies, camp attending, payment/account balance, and age. \\\hline
 	Related \hspace{5em} Requirements:& Sort Campers (\cref{des:sort campers}); \hyperlink{Req3}{Req 3}, \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
-		\item Camper and parent information (name, allergies, camp, account balance, age) is submitted into the system.
-		\item Camper and parent information is accessible for sorting.
+		\item Camper and parent information (name, allergies, camp, account balance, age) are submitted into the system.
+		\item Camper and parent information are accessible for sorting.
 	\end{enumerate}\\\hline
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
-	\item Navigate to sort option.
+	\item Navigate to the sort option.
 	\item Select a category of camper information to sort by.
 	\item Click enter.
 	\end{enumerate}\\\hline
@@ -238,10 +238,10 @@ The small subset of testing we show here will all be done using Functional Black
 	\hline
 	Test Case \# & Sort Category & Expected Result & Summary\\\hline
 	TC04-01 & Name & Campers are sorted alpha-numerically by name & Verifies sorting is valid and completed for the name category.\vspace*{1em}\\\hline
-	TC04-02 & Allergies & Campers are sorted alpha-numerically by allergies & Verifies sorting is valid and completed for the allergies category.\vspace*{1em}\\	\hline
-	TC04-03 & Camp & Campers are sorted alpha-numerically by camp & Verifies sorting is valid and completed for the camp category.\vspace*{1em}\\\hline
-	TC04-04 & Account Balance & Campers are sorted numerically by payments & Verifies sorting is valid and completed for the payments category.\vspace*{1em}\\\hline
-	TC04-05 & Age & Campers are sorted numerically by age & Verifies sorting is valid and completed for the age category.\vspace*{1em}\\\hline
+	TC04-02 & Allergies & Campers are sorted alpha-numerically by allergies & Verifies that sorting is valid and completed for the allergies category.\vspace*{1em}\\	\hline
+	TC04-03 & Camp & Campers are sorted alpha-numerically by camp & Verifies that sorting is valid and completed for the camp category.\vspace*{1em}\\\hline
+	TC04-04 & Account Balance & Campers are sorted numerically by payments & Verifies that sorting is valid and completed for the payments category.\vspace*{1em}\\\hline
+	TC04-05 & Age & Campers are sorted numerically by age & Verifies that sorting is valid and completed for the age category.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 \clearpage
@@ -250,7 +250,7 @@ The small subset of testing we show here will all be done using Functional Black
 %------------------------------------
 % Will's Test Cases
 %------------------------------------
-\subsection*{Test Suite 3: Schedule}
+\subsection*{test Suite 3: Schedule}
 
 \begin{table}[H]
 \begin{center}
@@ -260,22 +260,22 @@ The small subset of testing we show here will all be done using Functional Black
 	ID: & TC05\\\hline
 	Name: & View Counselor Schedule \\\hline
 	Author: & William Jardee\\\hline
-	Summary: & Each counselor must be able to view their own schedule according to a given input of dates. This needs to be robust to any weird combination of dates and times requested and worked in the system. \\\hline
+	Summary: & Each counselor must be able to view their schedule according to a given input of dates; this needs to be robust to any weird combination of dates and times requested and worked in the system. \\\hline
 	Related \hspace{5em} Requirements:& View Counselor Schedules (\cref{des:view counselor schedules}); \hyperlink{Req3}{Req 3}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt]
-		\item Request for counself schedules ifs valid at this time (i.e., necessary credentials have been tested).
+		\item Request for counselor schedules is valid at this time (i.e., necessary credentials have been tested).
 		\item Counselor schedules have been generated in the system. 
 	\end{enumerate}\\\hline
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
-		\item Sign in as appropriate user (counselor).
+		\item Sign in as an appropriate user (counselor).
 		\item Navigate to ``schedules" page.
 		\item Enter appropriate data (dates).
 		\item Click enter.
 	\end{enumerate}\\\hline
 	Test Data & \vspace*{.25em} Two counselor's data:
 	\begin{itemize}[topsep=0pt]
-		\item Andrew: Works this week Monday-Wednesday 9am-3:30pm and Thursday 10am-4pm. Does not work next week.
-		\item Bailey: Works this week Wednesday 9pm-Thursday 10:30am and saturday-Tuesday 7am-5pm.
+		\item Andrew: Works this week Monday-Wednesday 9 am-3:30 pm and Thursday 10 am-4 pm and does not work next week.
+		\item Bailey: Works this week Wednesday 9 pm-Thursday 10:30 am and Saturday-Tuesday 7 am-5 pm.
 	\end{itemize}
 \end{tabular}
 \end{center}
@@ -287,14 +287,14 @@ The small subset of testing we show here will all be done using Functional Black
 	Test Case \# & Messaging System & Expected Result & Summary\\\hline
 	TC05-01 & Andrew: Monday of this week $\longrightarrow$ Friday of this week. & Weekly schedule view displayed. & Verifies that the counselor's data is seen individually, only the dates of interest are shown, and the appropriate times are shown. \vspace*{1em}\\\hline
 	TC05-02 & Andrew: Monday of next week $\longrightarrow$ Friday of next week. & Weekly schedule view displayed. It should be empty. & Verifies weeks are separate and empty weeks are viewable. \vspace*{1em}\\\hline
-	TC05-03 & Andrew: Wednesday this week $\longrightarrow$ Wednesday this week. & A single-day version of schedule view displayed. & Verifies single-day querry recognized. Slightly different visualization of single-day.\vspace*{1em}\\\hline
-	TC05-04 & Andrew: Wednesday of this week $\longrightarrow$ Wednesday of next week. & Weekly schedule view displayed. & Verifies querry can be started on arbitrary day and split over weekend.\vspace*{1em}\\\hline
-	TC05-05 & Bailey: Monday of this week $\longrightarrow$ Friday of this week. & Weekly schedule view displayed. & Verifies counselor schedules are seen differently. checks that work day can be split over midnight.\vspace*{1em}\\\hline
-	TC05-06 & Bailey: Wednesday of this week $\longrightarrow$ Wednesday of next week. & Weekly schedule view is displayed. & Verifies query can be started on arbitrary day and split over weekend; in case of different counselors.\vspace*{1em}\\\hline
-	TC05-07 & Bailey: Monday of this week $\longrightarrow$ Tuesday of this week. & Weekly schedule view displaeyed. It should be empty. & Verifies days before first workday are viewable. \vspace*{1em}\\\hline
-	TC05-08 & Andrew: Friday of this week $\longrightarrow$ Monday of this week. & Error Message displayed: second date must be after first date. & Verifies system checks that range cannot be backwards.\vspace*{1em}\\\hline
-	TC05-09 & Andrew: Monday of next week $\longrightarrow$ Fiday of this week. & Error Message displayed: second date must be after first date. & Verifies system checks that range cannot be backwards (checks date, not weekday name).\vspace*{1em}\\\hline
-	TC05-10 & Andrew: Montday of this week $\longrightarrow$ Friday of next week. Then, request a refresh of the page. & Weekly schedule view is displayed (of the correct two week period). & Verifies query is preserved over refresh.\vspace*{1em}\\\hline
+	TC05-03 & Andrew: Wednesday this week $\longrightarrow$ Wednesday this week. & A single-day version of the schedule view is displayed. & Verifies single-day query recognized. Slightly different visualization of single-day.\vspace*{1em}\\\hline
+	TC05-04 & Andrew: Wednesday of this week $\longrightarrow$ Wednesday of next week. & Weekly schedule view displayed. & Verifies query can be started on an arbitrary day and split over the weekend.\vspace*{1em}\\\hline
+	TC05-05 & Bailey: Monday of this week $\longrightarrow$ Friday of this week. & Weekly schedule view displayed. & Verifies counselor schedules are seen differently. Checks that work day can be split over midnight.\vspace*{1em}\\\hline
+	TC05-06 & Bailey: Wednesday of this week $\longrightarrow$ Wednesday of next week. & Weekly schedule view is displayed. & Verifies query can be started on an arbitrary day and split over the weekend; in case of different counselors.\vspace*{1em}\\\hline
+	TC05-07 & Bailey: Monday of this week $\longrightarrow$ Tuesday of this week. & Weekly schedule view is displayed. It should be empty. & Verifies days before the first workday are viewable. \vspace*{1em}\\\hline
+	TC05-08 & Andrew: Friday of this week $\longrightarrow$ Monday of this week. & Error Message displayed: the second date must be after the first date. & Verifies system checks that range cannot be backward.\vspace*{1em}\\\hline
+	TC05-09 & Andrew: Monday of next week $\longrightarrow$ Friday of this week. & Error Message displayed: the second date must be after the first date. & Verifies system checks that range cannot be backward (checks date, not weekday name).\vspace*{1em}\\\hline
+	TC05-10 & Andrew: Monday of this week $\longrightarrow$ Friday of next week. Then, request a refresh of the page. & Weekly schedule view is displayed (of the correct two-week period). & Verifies query is preserved over a refresh.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 \clearpage
@@ -315,17 +315,17 @@ The small subset of testing we show here will all be done using Functional Black
 		\item Parents must have children registered as campers.
 	\end{enumerate}\\\hline
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
-		\item Sign in as appropriate user (parent).
+		\item Sign in as an appropriate user (parent).
 		\item Navigate to ``schedule" page.
-		\item Enter appropriate data (choose a week from the drop-down menu; it should be labeled by the dates of the week).
+		\item Enter appropriate data (choose a week from the drop-down menu; the week's dates should label it).
 		\item Click enter.
 	\end{enumerate}\\\hline
 	Test Data & \vspace*{.25em} Three parents' data:
 	\begin{itemize}[topsep=0pt]
-		\item Alex: Has one child who will be attending this week's camps.
-		\item Braden: Has two childre. child 1 had camp last week and has camp this week. Child 2 has bamp this week and next week.
-		\item Cathy: Has one child who will be attending this week's camp and camp in two weeks.
-		\item Dana: Does not have any children atending any upcoming camps; however, his data is on the record from previous camps.
+		\item Alex: Has one child attending this week's camps.
+		\item Braden: Has two children. Child 1 had camp last week and has camp this week. Child 2 has bamp this week and next week.
+		\item Cathy: Has one child attending this week's camp and camp in two weeks.
+		\item Dana: Does not have any children attending any upcoming camps; however, his data is on the record from previous camps.
 	\end{itemize}
 \end{tabular}
 \end{center}
@@ -336,15 +336,15 @@ The small subset of testing we show here will all be done using Functional Black
 	\hline
 	Test Case \# & Messaging System & Expected Result & Summary\\\hline
 	TC06-01 & Alex; this week. & Weekly schedule for \textit{their} child view displayed. & Verifies the standard display case.\vspace*{1em}\\\hline
-	TC06-02 & Alex; next week. & Prompt an error tht ehy do not have a child attending camp next week. Presents next week child will be attending (this week). & Verifies system checks for invalid search. \vspace*{1em}\\\hline
-	TC06-03 & Alex; this week $\longrightarrow$ next week. & Notify that their child will not be attending next week. display two-week schedule for camper. & Verifies system checks for notification and rending empty weeks.\vspace*{1em}\\\hline
-	TC06-04 & Alex; last week. & Promp an error that they did not have a child attending last week. & Verifies can query previous weeks.\vspace*{1em}\\\hline
-	TC06-05 & Braden; this week. & Weekly scheudle for their children shown, shown in parallel view as separate schedules. & Verifies multiple-child case.\vspace*{1em}\\\hline
-	TC06-06 & Braden; next week. & Weekly schedule for only child 2. & Verifies correctly separates children and only shows relevant information.\vspace*{1em}\\\hline
+	TC06-02 & Alex; next week. & Prompt an error that they do not have a child attending camp next week. Presents next week child will be attending (this week). & Verifies system checks for invalid searches. \vspace*{1em}\\\hline
+	TC06-03 & Alex; this week $\longrightarrow$ next week. & Notify that their child will not be attending next week. Display a two-week schedule for the camper. & Verifies system checks for notification and rending empty weeks.\vspace*{1em}\\\hline
+	TC06-04 & Alex; last week. & Prompt an error that they did not have a child attending last week. & Verifies can query previous weeks.\vspace*{1em}\\\hline
+	TC06-05 & Braden; this week. & Weekly schedules for their children are shown in parallel as separate schedules. & Verifies multiple-child case.\vspace*{1em}\\\hline
+	TC06-06 & Braden; next week. & Weekly schedule for only child 2. & Verifies correctly separates children, and only shows relevant information.\vspace*{1em}\\\hline
 	TC06-07 & Braden; this week $\longrightarrow$ next week & Weekly schedule for both children, shown in parallel as separate schedules. & Verifies that multiple children can be searched when empty space is present.\vspace*{1em}\\\hline
-	TC06-08 & Braden; last week. & Weekly schedule for only child 1. & Verifies searching previous weeks with multiple children.\vspace*{1em}\\\hline
-	TC06-09 & Cathy; this week $\longrightarrow$ week after next. & Notify that child will not be attending next week. Displays three-week view. & Verifies parsing gap in schedule.\vspace*{1em}\\\hline
-	TC06-10 & Dana; this week. & Notify that their child will not be attending next week. Presents next week child will be attending $\rightarrow$ not registerd for upcoming camps, so offers link to sign up fro camp. & Verifies empty state and unique prompt to register for a camp.\vspace*{1em}\\\hline
+	TC06-08 & Braden; last week. & Weekly schedule for only child 1. & Verifies previous searching weeks with multiple children.\vspace*{1em}\\\hline
+	TC06-09 & Cathy; this week $\longrightarrow$ week after next. & Notify that child will not be attending next week. Displays three-week view. & Verifies parsing gap in the schedule.\vspace*{1em}\\\hline
+	TC06-10 & Dana; this week. & Notify that their child will not be attending next week. Presents next week child will be attending $\rightarrow$ not registered for upcoming camps, so offers a link to sign up for camp. & Verifies empty state and unique prompt to register for a camp.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 \clearpage
@@ -363,15 +363,15 @@ The small subset of testing we show here will all be done using Functional Black
 	ID: & TC07\\\hline
 	Name: & Track Attendance \\\hline
 	Author: & Jacob Coleman\\\hline
-	Summary: & Counselors have the ability to update camper's attendance, and can't edit those who aren't in the system/on their schedule. \\\hline
+	Summary: & Counselors can update camper's attendance and cannot edit those not in the system/on their schedule. \\\hline
 	Related \hspace{5em} & Track Attendance (\cref{des:track attendance}); \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Camper has been entered into the system.
-		\item Camper is able to be searched for in system.
+		\item Camper can be searched for in the system.
 	\end{enumerate}\\\hline
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
 		\item Sign in with proper credentials.
-		\item Navigate to attendance page.
+		\item Navigate to ``attendance" page.
 		\item Enter appropriate data.
 		\item Click enter.
 	\end{enumerate}\\\hline
@@ -388,9 +388,9 @@ The small subset of testing we show here will all be done using Functional Black
 \begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
 	\hline
 	Test Case \# & Search Term & Expected Result & Summary\\\hline
-	TC07-01 & Enter camper name: ``John Doe" & Notification that the camper is marked as present. & Verifies that the camper name entered has been acounted for and registered as ``present" in the system.\vspace*{1em}\\\hline
+	TC07-01 & Enter camper name: ``John Doe" & Notification that the camper is marked as present. & Verifies that the camper name entered has been accounted for and registered as ``present" in the system.\vspace*{1em}\\\hline
 	TC07-02 & Enter camper name: ``Jimmy Smith" & Notification that the camper is marked as absent& Verifies the camper name entered has not been accounted for, being marked as ``absent" in the system.\vspace*{1em}\\	\hline
-	TC07-03 & Enter camper name: ``Mike Jones" & Notified that the camper is not registered in the system & Verifies the camper exists in the registered list of campers. \vspace*{1em}\\\hline
+	TC07-03 & Enter camper name: ``Mike Jones" & Notified that the camper is not registered in the system & Verifies the camper exists in the registered campers list. \vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 \clearpage
@@ -404,7 +404,7 @@ The small subset of testing we show here will all be done using Functional Black
 	ID: & TC08\\\hline
 	Name: & Schedule Absence \\\hline
 	Author: & Jacob Coleman\\\hline
-	Summary: & Parents can modify their camper's schedule fully automatically without need to contact any personal. \\\hline
+	Summary: & Parents can modify their camper's schedule fully automatically without the need to contact any personnel. \\\hline
 	Related \hspace{5em} Requirements:& Schedule Absence (\cref{des:schedule absence}); \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Parent is logged in.
@@ -430,13 +430,13 @@ The small subset of testing we show here will all be done using Functional Black
 \begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
 	\hline
 	Test Case \# & Search Term & Expected Result & Summary\\\hline
-	TC08-01 & Family 1; Jimmy will be absent today. & Jimmy is excused from camp for current day; message is sent to camp. & Verifies that the system is updated that the camper will be absent from camp today.\vspace*{1em}\\\hline
+	TC08-01 & Family 1; Jimmy will be absent today. & Jimmy is excused from camp for the current day; a message is sent to the camp. & Verifies that the system is updated that the camper will be absent from camp today.\vspace*{1em}\\\hline
 	TC08-02 & Family 1; Jimmy will be absent tomorrow. & Jimmy is excused from camp for tomorrow. & Verifies that the system is updated that the camper will be absent from camp tomorrow.\vspace*{1em}\\	\hline
-	TC08-03 & Family 2; John will be absent today & Excuses camper of same family dataset from camp today; message is sent to camp. & Verifies that a single child of a family can be excused.\vspace*{1em}\\\hline
-	TC08-04 & Family 2; John and Jane will be absent today & Excuse both campers of same family dataset from camp today; message is sent to camp. & Verifies that a all child of a family can be excused.\vspace*{1em}\\\hline
-	TC08-05 & Family 2; John will be absent today and Jane will be absent tomorrow & Excuse both campers of same family dataset from camp on different days; message is sent to camp. & Verifies that a all child of a family can be excused, and those days can be different.\vspace*{1em}\\\hline
-	TC08-06 & Family 1; Jimmy will be absent tomorrow -> week from today & Excuse campers from camp over this range; message is sent to camp. & Verifies camper can be excused over a range.\vspace*{1em}\\\hline\
-	TC08-07 & Family 3; Joseph will be absent today & Parent is notified that the camper is not scheduled for camp today and nothing is changed in the system. & Verifies campers cannot be marked absent when not attending.\vspace*{1em}\\\hline
+	TC08-03 & Family 2; John will be absent today & Excuses camper of the same family dataset from camp today; a message is sent to the camp. & Verifies that a single child of a family can be excused.\vspace*{1em}\\\hline
+	TC08-04 & Family 2; John and Jane will be absent today & Excuse both campers of the same family dataset from camp today; a message is sent to the camp. & Verifies that all children of a family can be excused.\vspace*{1em}\\\hline
+	TC08-05 & Family 2; John will be absent today, and Jane will be absent tomorrow & Excuse both campers of the same family dataset from camp on different days; a message is sent to the camp. & Verifies that all children of a family can be excused, and those days can be different.\vspace*{1em}\\\hline
+	TC08-06 & Family 1; Jimmy will be absent tomorrow $\longrightarrow$ week from today & Excuse campers from camp over this range; a message is sent to the camp. & Verifies camper can be excused over a range.\vspace*{1em}\\\hline\
+	TC08-07 & Family 3; Joseph will be absent today & Parent is notified that the camper is not scheduled for camp today, and nothing is changed in the system. & Verifies campers cannot be marked absent when not attending.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 
@@ -449,7 +449,7 @@ The small subset of testing we show here will all be done using Functional Black
 
 \appendix
 \section{Camp Management System}\label{appendix:camp_sys}
-To make cross referencing easier, the used requirement and usecases from the original ``Camp Management System Requirements Spec" have been copied here. Any hyperlinks will redirect you to the relevant requirements/usecase.
+The user requirement and usecases from the original ``Camp Management System Requirements Spec" have been copied to make cross-referencing easier. Any hyperlinks will redirect to the relevant requirements/usecase.
 
 \subsection{Requirements}
 
@@ -470,10 +470,10 @@ To make cross referencing easier, the used requirement and usecases from the ori
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Message Camp\\\hline
-	Description: & The parent send a message to a counselor or staff members.\\\hline
+	Description: & The parent sends a message to a counselor or staff members.\\\hline
 	Related Requirements:& \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& The parent has contact information in the system.\\\hline
-	Successful end condition:& Staff receives a message from parent.\\\hline
+	Successful end condition:& staff receives a message from the parent.\\\hline
 	Failed end condition:& Message not received. \\\hline
 	Actors:& Counselor, Parent.\\\hline
 	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
@@ -497,7 +497,7 @@ To make cross referencing easier, the used requirement and usecases from the ori
 	Related Requirements:& \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& The parent has contact information or has created a profile.\\\hline
 	Successful end condition:& The parent receives a message.\\\hline
-	Failed end condition:& Message not received or an account is not found.. \\\hline
+	Failed end condition:& message not received or an account is not found.. \\\hline
 	Actors:& Counselor, Parent.\\\hline
 	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
 		\item The message is created.
@@ -522,16 +522,16 @@ To make cross referencing easier, the used requirement and usecases from the ori
 	Related Requirements:& \hyperlink{Req2}{Req 2}, \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& All Camper information is accessible by councelors.\\\hline
 	Successful end condition:& Relevant camper(s) are displayed based on search terms.\\\hline
-	Failed end condition:& Not all relevant campers appear from search term.\\\hline
+	Failed end condition:& Not all relevant campers appear from the search term.\\\hline
 	Actors:& Counselor.\\\hline
 	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
-		\item Counselor enters search term.
-		\item System searches camper list for term.
-		\item System displays results to counselor.
+		\item Counselor enters a search term.
+		\item System searches camper list for the term.
+		\item System displays results to the counselor.
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \begin{enumerate}[topsep=0pt]
 		\item No results found based on term.
-		\item System tells user there are no results for the term.	
+		\item System tells the user there are no results for the term.	
 	\end{enumerate}
 \end{tabular}
 \end{center}
@@ -545,14 +545,14 @@ To make cross referencing easier, the used requirement and usecases from the ori
 	Name: & Sort Campers.\\\hline
 	Description: & Sort the campers in the database alpha-numerically by name, allergies, camp, payments, or age.\\\hline
 	Related Requirements:& \hyperlink{Req3}{Req 3}, \hyperlink{Req4}{Req 4}\\\hline
-	Preconditions:& All camper information is accessibly by counselors.\\\hline
+	Preconditions:& All camper information is accessible by counselors.\\\hline
 	Successful end condition:& Campers are sorted by specified category.\\\hline
-	Failed end condition:& Sorting is not displayed corrrectly based on selected category.\\\hline
+	Failed end condition:& Sorting is not displayed correctly based on the selected category.\\\hline
 	Actors:& Counselor,\\\hline
 	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
 		\item Counselor selects category to sort.
 		\item System sorts campers by category.
-		\item System displays sorted results to counselor.
+		\item System displays sorted results to the counselor.
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
@@ -567,14 +567,14 @@ To make cross referencing easier, the used requirement and usecases from the ori
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & View Counselor Schedule\\\hline
-	Description: & Show a counselor their activities on their schedule.\\\hline
+	Description: & Show a counselor the activities on their schedule.\\\hline
 	Related Requirements:& \hyperlink{Req3}{Req 3}\\\hline
 	Preconditions:& Counselor must be logged in.\\\hline
 	Successful end condition:& Counselor views their schedule. \\\hline
 	Failed end condition:& \\\hline
 	Actors:& Counselor. \\\hline
 	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
-		\item Counselor Chooses to view schedule.
+		\item Counselor Chooses to view the schedule.
 		\item System displays the counselor's schedule.
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
@@ -588,14 +588,14 @@ To make cross referencing easier, the used requirement and usecases from the ori
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & View Camper Schedule(s) from Parent View.\\\hline
-	Description: & Parent's must be able to view their camper's schedule or schedules if they have multiple children attending.\\\hline
+	Description: & Parents must be able to view their camper's schedule or schedules if they have multiple children attending.\\\hline
 	Related Requirements:& \hyperlink{Req3}{Req 3}\\\hline
 	Preconditions:& Parents must be logged in and have children registered as campers.\\\hline
 	Successful end condition:& Parent view schedule(s) \\\hline
 	Failed end condition:& \\\hline
 	Actors:& Counselor. \\\hline
 	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
-		\item Parent chooses to view schedule.
+		\item Parent chooses to view the schedule.
 		\item System displays the parent's schedule.
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
@@ -611,7 +611,7 @@ To make cross referencing easier, the used requirement and usecases from the ori
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Track Attendance\\\hline
-	Description: & Track campers attendance everyday.\\\hline
+	Description: & Track campers' attendance every day.\\\hline
 	Related Requirements:& \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& Camper is in the system.\\\hline
 	Successful end condition:& Attendance successfully marked. \\\hline
@@ -632,7 +632,7 @@ To make cross referencing easier, the used requirement and usecases from the ori
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Schedule absence.\\\hline
-	Description: & Parents are able to schedule a camper's absence ahead of time. For example, if a camper has a dentist appointment in two days, then the parents can schedule the absence early. Absences can typeically be multiple days in advance..\\\hline
+	Description: & Parents can schedule a camper's absence ahead of time. For example, if a camper has a dentist appointment in two days, the parents can schedule the absence early. Absences can typically be multiple days in advance..\\\hline
 	Related Requirements:& \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& Camper is in the system.\\\hline
 	Successful end condition:& Counselors are aware that the camper will not show up that day. \\\hline
@@ -640,7 +640,7 @@ To make cross referencing easier, the used requirement and usecases from the ori
 	Actors:& Parent. \\\hline
 	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
 		\item Parent logs into the system.
-		\item Parent chedules camper's absence.
+		\item Parent schedules camper's absence.
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
@@ -671,3 +671,4 @@ To make cross referencing easier, the used requirement and usecases from the ori
 
 
 \end{document}
+

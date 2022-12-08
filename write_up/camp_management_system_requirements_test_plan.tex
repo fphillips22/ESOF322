@@ -28,6 +28,13 @@
 \graphicspath{ {../ESOF 322 Project (drive copy)/} }
 
 
+% suppress badbox
+\hbadness=10000
+\hfuzz=\maxdimen
+\newcount\hbadness
+\newdimen\hfuzz
+
+
 %\usepackage{fontspec}
 % Use this line to change the font of your file. If you have the Open Dyslexic v. 1 downloaded (bold-italic- bolditalics included), you can use this line. This font addresses Dyslexic people. 
 %\setmainfont{OpenDyslexic}
@@ -52,13 +59,82 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 % add intro, objectives, features, technique
 
+\clearpage
 
 %------------------------------------
 % Fletcher's Test Cases
 %------------------------------------
 \subsection*{Test Suite 1: Messaging System}
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
+	ID: & TC01\\\hline
+	Name: & Message Camp \\\hline
+	Author: & Fletcher Phillips\\\hline
+	Summary: &  \\\hline
+	Related \hspace{5em} Requirements:& Message Camp (\cref{des:message camp}); \hyperlink{Req4}{Req 4} \\\hline
+	Preconditions:& \begin{enumerate}[topsep=0pt]
+		\item Parent has a device to send a message (text, email, in-app messaging).
+		\item Parent's contact information is in the system.
+	\end{enumerate}\\\hline
+	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
+		\item Choose messaging system.
+		\item Create message to send.
+		\item Send message.
+		\item Confirmation receipt is sent.
+	\end{enumerate}\\\hline
+	Test Data & 
+\end{tabular}
+\label{TC01}	
+\end{center}
+\end{table}
 
+\begin{center}
+\begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
+	\hline 
+	Test Case \# & Messaging System & Expected Result & Summary\\\hline
+	TC01-01 & Text & Text message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via text.\vspace*{1em}\\\hline
+	TC01-02 & Email & Email message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via email.\vspace*{1em}\\	\hline
+	TC01-03 & In-app messaging & In-app message message irs received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
+\end{longtable}
+\end{center}
+\clearpage
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
+	ID: & TC02\\\hline
+	Name: & Message Parent \\\hline
+	Author: & Fletcher Phillips\\\hline
+	Summary: &  \\\hline
+	Related \hspace{5em} & Message Parent (\cref{des:message parent}); \hyperlink{Req4}{Req 4} \\\hline
+	Preconditions:& \begin{enumerate}[topsep=0pt] 
+		\item Parent's contact information is stored.
+		\item Parent has created a profile.
+	\end{enumerate}\\\hline
+	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
+		\item Choose messaging system.
+		\item Create the message.
+		\item Send Message
+	\end{enumerate}\\\hline
+	Test Data &
+\end{tabular}
+\label{TC02}	
+\end{center}
+\end{table}
+
+\begin{center}
+\begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
+	\hline
+	Test Case \# & Messaging System & Expected Result & Summary\\\hline
+	TC02-01 & Messaging system: text & Text message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via text.\vspace*{1em}\\\hline
+	TC02-02 & Messaging system: email & Email mesage received by counselor osr staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via email. \vspace*{1em}\\	\hline
+	TC02-03 & Message system: in-app messaging & In-app messaging message is received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
+\end{longtable}
+\end{center}
+\clearpage
 
 
 %------------------------------------
@@ -73,7 +149,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	Name: & Search Campers Test \\\hline
 	Author: & Megan Steinmasel\\\hline
 	Summary: &  \\\hline
-	Related \hspace{5em} Requirements:& ``View Camper" - Search Campers Use Case\\\hline
+	Related \hspace{5em} Requirements:& Search Campers (\cref{des:search campers}); \hyperlink{Req2}{Req 2}, \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt]
 		\item Camper and parent information is submitted into the system.
 		\item Camper and parent information is accessible from search.
@@ -85,7 +161,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Test Data & Camper: ``Max Johnson" with Parent: ``Jane Williams".
 \end{tabular}
-\label{des:}	
+\label{TC03}	
 \end{center}
 \end{table}
 
@@ -104,6 +180,8 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	TC03-09 & First and last name: ``ffjbvl cfgkp" & No campers/parents are displayed & Verifies an invalid first or last name displays no result.\\\hline
 \end{longtable}
 \end{center}
+\clearpage
+
 
 \begin{table}[H]
 \begin{center}
@@ -112,7 +190,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	Name: & Sort Campers \\\hline
 	Author: & Megan Steinmasel\\\hline
 	Summary: &  \\\hline
-	Related \hspace{5em} Requirements:& ``View Camper" - Sort Campers Use Case\\\hline
+	Related \hspace{5em} Requirements:& Sort Campers (\cref{des:sort campers}); \hyperlink{Req3}{Req 3}, \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Camper and parent information (name, allergies, camp, account balance, age) is submitted into the system.
 		\item Camper and parent information is accessible for sorting.
@@ -129,7 +207,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\hspace*{1cm} account balance $\rightarrow$ $\{$\$0, \$0.12, \$10$\}$\newline
 	\hspace*{1cm} age $\rightarrow$ $\{$7, 12, 17$\}$
 \end{tabular}
-\label{des:}	
+\label{TC04}	
 \end{center}
 \end{table}
 
@@ -144,13 +222,108 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	TC04-05 & Age & Campers are sorted numerically by age & Verifies sorting is valid and completed for the age category.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
+\clearpage
 
 
 %------------------------------------
 % Will's Test Cases
 %------------------------------------
-\subsection*{Test Suite 3: View Schedule}
+\subsection*{Test Suite 3: Schedule}
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
+	ID: & TC05\\\hline
+	Name: & View Counselor Schedule \\\hline
+	Author: & William Jardee\\\hline
+	Summary: &  \\\hline
+	Related \hspace{5em} Requirements:& View Counselor Schedules (\cref{des:view counselor schedules}); \hyperlink{Req3}{Req 3}\\\hline
+	Preconditions:& \begin{enumerate}[topsep=0pt]
+		\item Request for counself schedules ifs valid at this time (i.e., necessary credentials have been tested).
+		\item Counselor schedules have been generated in the system. 
+	\end{enumerate}\\\hline
+	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
+		\item Sign in as appropriate user (counselor).
+		\item Navigate to ``schedules" page.
+		\item Enter appropriate data (dates).
+		\item Click enter.
+	\end{enumerate}\\\hline
+	Test Data & \vspace*{.25em} Two counselor's data:
+	\begin{itemize}[topsep=0pt]
+		\item Andrew: Works this week Monday-Wednesday 9am-3:30pm and Thursday 10am-4pm. Does not work next week.
+		\item Bailey: Works this week Wednesday 9pm-Thursday 10:30am and saturday-Tuesday 7am-5pm.
+	\end{itemize}
+\end{tabular}
+\label{TC05}	
+\end{center}
+\end{table}
+
+\begin{center}
+\begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
+	\hline 
+	Test Case \# & Messaging System & Expected Result & Summary\\\hline
+	TC05-01 & Andrew: Monday of this week $\longrightarrow$ Friday of this week. & Weekly schedule view displayed. & Verifies that the counselor's data is seen individually, only the dates of interest are shown, and the appropriate times are shown. \vspace*{1em}\\\hline
+	TC05-02 & Andrew: Monday of next week $\longrightarrow$ Friday of next week. & Weekly schedule view displayed. It should be empty. & Verifies weeks are separate and empty weeks are viewable. \vspace*{1em}\\\hline
+	TC05-03 & Andrew: Wednesday this week $\longrightarrow$ Wednesday this week. & A single-day version of schedule view displayed. & Verifies single-day querry recognized. Slightly different visualization of single-day.\vspace*{1em}\\\hline
+	TC05-04 & Andrew: Wednesday of this week $\longrightarrow$ Wednesday of next week. & Weekly schedule view displayed. & Verifies querry can be started on arbitrary day and split over weekend.\vspace*{1em}\\\hline
+	TC05-05 & Bailey: Monday of this week $\longrightarrow$ Friday of this week. & Weekly schedule view displayed. & Verifies counselor schedules are seen differently. checks that work day can be split over midnight.\vspace*{1em}\\\hline
+	TC05-06 & Bailey: Wednesday of this week $\longrightarrow$ Wednesday of next week. & Weekly schedule view is displayed. & Verifies query can be started on arbitrary day and split over weekend; in case of different counselors.\vspace*{1em}\\\hline
+	TC05-07 & Bailey: Monday of this week $\longrightarrow$ Tuesday of this week. & Weekly schedule view displaeyed. It should be empty. & Verifies days before first workday are viewable. \vspace*{1em}\\\hline
+	TC05-08 & Andrew: Friday of this week $\longrightarrow$ Monday of this week. & Error Message displayed: second date must be after first date. & Verifies system checks that range cannot be backwards.\vspace*{1em}\\\hline
+	TC05-09 & Andrew: Monday of next week $\longrightarrow$ Fiday of this week. & Error Message displayed: second date must be after first date. & Verifies system checks that range cannot be backwards (checks date, not weekday name).\vspace*{1em}\\\hline
+	TC05-10 & Andrew: Montday of this week $\longrightarrow$ Friday of next week. Then, request a refresh of the page. & Weekly schedule view is displayed (of the correct two week period). & Verifies query is preserved over refresh.\vspace*{1em}\\\hline
+\end{longtable}
+\end{center}
+\clearpage
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
+	ID: & TC06\\\hline
+	Name: & View Camper Schedules from Parent(s) View \\\hline
+	Author: & William Jardee\\\hline
+	Summary: &  \\\hline
+	Related \hspace{5em} & View Camper Schedules from Parent(s) View (\cref{des:view camper schedules}); \hyperlink{Req3}{Req 3}\\\hline
+	Preconditions:& \begin{enumerate}[topsep=0pt] 
+		\item Parents must be logged in.
+		\item Parents must have children registered as campers.
+	\end{enumerate}\\\hline
+	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
+		\item Sign in as appropriate user (parent).
+		\item Navigate to ``schedule" page.
+		\item Enter appropriate data (choose a week from the drop-down menu; it should be labeled by the dates of the week).
+		\item Click enter.
+	\end{enumerate}\\\hline
+	Test Data & \vspace*{.25em} Three parents' data:
+	\begin{itemize}[topsep=0pt]
+		\item Alex: Has one child who will be attending this week's camps.
+		\item Braden: Has two childre. child 1 had camp last week and has camp this week. Child 2 has bamp this week and next week.
+		\item Cathy: Has one child who will be attending this week's camp and camp in two weeks.
+		\item Dana: Does not have any children atending any upcoming camps; however, his data is on the record from previous camps.
+	\end{itemize}
+\end{tabular}
+\label{TC06}	
+\end{center}
+\end{table}
+
+\begin{center}
+\begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
+	\hline
+	Test Case \# & Messaging System & Expected Result & Summary\\\hline
+	TC06-01 & Alex; this week. & Weekly schedule for \textit{their} child view displayed. & Verifies the standard display case.\vspace*{1em}\\\hline
+	TC06-02 & Alex; next week. & Prompt an error tht ehy do not have a child attending camp next week. Presents next week child will be attending (this week). & Verifies system checks for invalid search. \vspace*{1em}\\\hline
+	TC06-03 & Alex; this week $\longrightarrow$ next week. & Notify that their child will not be attending next week. display two-week schedule for camper. & Verifies system checks for notification and rending empty weeks.\vspace*{1em}\\\hline
+	TC06-04 & Alex; last week. & Promp an error that they did not have a child attending last week. & Verifies can query previous weeks.\vspace*{1em}\\\hline
+	TC06-05 & Braden; this week. & Weekly scheudle for their children shown, shown in parallel view as separate schedules. & Verifies multiple-child case.\vspace*{1em}\\\hline
+	TC06-06 & Braden; next week. & Weekly schedule for only child 2. & Verifies correctly separates children and only shows relevant information.\vspace*{1em}\\\hline
+	TC06-07 & Braden; this week $\longrightarrow$ next week & Weekly schedule for both children, shown in parallel as separate schedules. & Verifies that multiple children can be searched when empty space is present.\vspace*{1em}\\\hline
+	TC06-08 & Braden; last week. & Weekly schedule for only child 1. & Verifies searching previous weeks with multiple children.\vspace*{1em}\\\hline
+	TC06-09 & Cathy; this week $\longrightarrow$ week after next. & Notify that child will not be attending next week. Displays three-week view. & Verifies parsing gap in schedule.\vspace*{1em}\\\hline
+	TC06-10 & Dana; this week. & Notify that their child will not be attending next week. Presents next week child will be attending $\rightarrow$ not registerd for upcoming camps, so offers link to sign up fro camp. & Verifies empty state and unique prompt to register for a camp.\vspace*{1em}\\\hline
+\end{longtable}
+\end{center}
+\clearpage
 
 
 %------------------------------------
@@ -165,7 +338,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	Name: & Track Attendance \\\hline
 	Author: & Jacob Coleman\\\hline
 	Summary: &  \\\hline
-	Related \hspace{5em} \\\hline
+	Related \hspace{5em} & Track Attendance (\cref{des:track attendance}); \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Camper has been entered into the system.
 		\item Camper is able to be searched for in system.
@@ -182,7 +355,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 		\item Jimmy Smith: Camper who is currently absent.
 	\end{itemize}
 \end{tabular}
-\label{des:}	
+\label{TC07}	
 \end{center}
 \end{table}
 
@@ -195,6 +368,8 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	TC07-03 & Enter camper name: ``Mike Jones" & Notified that the camper is not registered in the system & Verifies the camper exists in the registered list of campers. \vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
+\clearpage
+
 
 \begin{table}[H]
 \begin{center}
@@ -203,7 +378,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	Name: & Schedule Absence \\\hline
 	Author: & Jacob Coleman\\\hline
 	Summary: &  \\\hline
-	Related \hspace{5em} Requirements:& \\\hline
+	Related \hspace{5em} Requirements:& Schedule Absence (\cref{des:schedule absence}); \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Parent is logged in.
 		\item Parent has at least one child registered as a camper.
@@ -221,7 +396,7 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 		\item Family 3: Has one child attending camp next week (Joseph Williams).
 	\end{itemize}
 \end{tabular}
-\label{des:}	
+\label{TC08}	
 \end{center}
 \end{table}
 
@@ -241,42 +416,221 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \clearpage
 
+
+%------------------------------------
+% Appendix of source
+%------------------------------------
+
 \appendix
 \section{Camp Management System}\label{appendix:camp_sys}
-\subsection{User Stories}
-% TODO only the user stories of interest
-\subsection{Use Cases}
-% TODO only the use cases that we used
+\subsection{Requirements}
 
+\noindent\textit{\hypertarget{Req1}{Requirement 1}}: A way to track attendance.\vspace{0.5em}
+
+\noindent\textit{\hypertarget{Req2}{Requirement 2}}: View Camper information.\vspace{0.5em}
+
+\noindent\textit{\hypertarget{Req3}{Requirement 3}}: Create and view schedule.\vspace{0.5em}
+
+\noindent\textit{\hypertarget{Req4}{Requirement 4}}: Send a message to parents.\vspace{0.5em}
+
+\subsection{Use Cases}
+% Test Suite 1:  Messaging System
 
 \begin{table}[!htb]
 \begin{center}
-\textbf{Author: Megan Steinmasel}
-\vspace*{1em}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
-	Name: & Search Database\\\hline
-	Description: & Search bar scans keywords through the database so the Website User can find a desired query/page.\\\hline
-	Related Requirements:& \hyperlink{us1}{User Story 1}\\\hline
-	Preconditions:& The user has successfully logged onto the website.\\\hline
-	Successful end condition:& Successful display of search bar and successful redirection.\\\hline
-	Failed end condition:& Search bar is not displayed or failed redirection. \\\hline
-	Actors:& Website User\\\hline
-	Basic Flow of Events: & \begin{enumerate}
-	\item Actor types in keywords to the search bar and clicks enter or selects a page to navigate to.
-	\item Request is processed, and the database is searched.
-	\item The appropriate query/page is displayed.
+	Name: & Message Camp\\\hline
+	Description: & The parent send a message to a counselor or staff members.\\\hline
+	Related Requirements:& \hyperlink{Req4}{Req 4}\\\hline
+	Preconditions:& The parent has contact information in the system.\\\hline
+	Successful end condition:& Staff receives a message from parent.\\\hline
+	Failed end condition:& Message not received. \\\hline
+	Actors:& Counselor, Parent.\\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item Message is created.
+		\item The message is sent.
+		\item confirmation receipt is sent.
 	\end{enumerate}\\\hline
-	Extensions/Exceptional Flow of Events: & \begin{enumerate}
-	\item An error is recognized: the search bar is not displayed and/or failed redirection.
-	\item Actor is notified of an error.
-	\item Log data.
-	\item The Actor is prompted for a refresh of the webpage.
-	\item When the refresh button is pressed, the system reboots and tries again.
-	\end{enumerate}
+	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:}	
+\label{des:message camp}	
 \end{center}
 \end{table}
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & Message Parent\\\hline
+	Description: & A counselor or staff member sends a message to a parent.\\\hline
+	Related Requirements:& \hyperlink{Req4}{Req 4}\\\hline
+	Preconditions:& The parent has contact information or has created a profile.\\\hline
+	Successful end condition:& The parent receives a message.\\\hline
+	Failed end condition:& Message not received or an account is not found.. \\\hline
+	Actors:& Counselor, Parent.\\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item The message is created.
+		\item Type of the message is chosen (text, email, or in-app messaging).
+		\item The message is sent.
+		\item A confirmation receipt is sent.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
+\end{tabular}
+\label{des:message parent}	
+\end{center}
+\end{table}
+
+% Test Suite 2: View camper information
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & Search Campers \\\hline
+	Description: & Look up campers by name or parent name. \\\hline
+	Related Requirements:& \hyperlink{Req2}{Req 2}, \hyperlink{Req4}{Req 4}\\\hline
+	Preconditions:& All Camper information is accessible by councelors.\\\hline
+	Successful end condition:& Relevant camper(s) are displayed based on search terms.\\\hline
+	Failed end condition:& Not all relevant campers appear from search term.\\\hline
+	Actors:& Counselor.\\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item Counselor enters search term.
+		\item System searches camper list for term.
+		\item System displays results to counselor.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item No results found based on term.
+		\item System tells user there are no results for the term.	
+	\end{enumerate}
+\end{tabular}
+\label{des:search campers}	
+\end{center}
+\end{table}
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & Sort Campers.\\\hline
+	Description: & Sort the campers in the database alpha-numerically by name, allergies, camp, payments, or age.\\\hline
+	Related Requirements:& \hyperlink{Req3}{Req 3}, \hyperlink{Req4}{Req 4}\\\hline
+	Preconditions:& All camper information is accessibly by counselors.\\\hline
+	Successful end condition:& Campers are sorted by specified category.\\\hline
+	Failed end condition:& Sorting is not displayed corrrectly based on selected category.\\\hline
+	Actors:& Counselor,\\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item Counselor selects category to sort.
+		\item System sorts campers by category.
+		\item System displays sorted results to counselor.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
+\end{tabular}
+\label{des:sort campers}	
+\end{center}
+\end{table}
+
+% Test Suite 3: Schedule
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & View Counselor Schedule\\\hline
+	Description: & Show a counselor their activities on their schedule.\\\hline
+	Related Requirements:& \hyperlink{Req3}{Req 3}\\\hline
+	Preconditions:& Counselor must be logged in.\\\hline
+	Successful end condition:& Counselor views their schedule. \\\hline
+	Failed end condition:& \\\hline
+	Actors:& Counselor. \\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item Counselor Chooses to view schedule.
+		\item System displays the counselor's schedule.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
+\end{tabular}
+\label{des:view counselor schedules}	
+\end{center}
+\end{table}
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & View Camper Schedule(s) from Parent View.\\\hline
+	Description: & Parent's must be able to view their camper's schedule or schedules if they have multiple children attending.\\\hline
+	Related Requirements:& \hyperlink{Req3}{Req 3}\\\hline
+	Preconditions:& Parents must be logged in and have children registered as campers.\\\hline
+	Successful end condition:& Parent view schedule(s) \\\hline
+	Failed end condition:& \\\hline
+	Actors:& Counselor. \\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item Parent chooses to view schedule.
+		\item System displays the parent's schedule.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
+\end{tabular}
+\label{des:view camper schedules}	
+\end{center}
+\end{table}
+
+% Test Suite 4: Attendance Tracking
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & Track Attendance\\\hline
+	Description: & Track campers attendance everyday.\\\hline
+	Related Requirements:& \hyperlink{Req1}{Req 1}\\\hline
+	Preconditions:& Camper is in the system.\\\hline
+	Successful end condition:& Attendance successfully marked. \\\hline
+	Failed end condition:& Attendance not added.\\\hline
+	Actors:& Counselor. \\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item Camper shows up or does not show up.
+		\item Counselor marks whether or not they showed up in the attendance database.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
+\end{tabular}
+\label{des:track attendance}	
+\end{center}
+\end{table}
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+	Name: & Schedule absence.\\\hline
+	Description: & Parents are able to schedule a camper's absence ahead of time. For example, if a camper has a dentist appointment in two days, then the parents can schedule the absence early. Absences can typeically be multiple days in advance..\\\hline
+	Related Requirements:& \hyperlink{Req1}{Req 1}\\\hline
+	Preconditions:& Camper is in the system.\\\hline
+	Successful end condition:& Counselors are aware that the camper will not show up that day. \\\hline
+	Failed end condition:& Camper marked unexcused.\\\hline
+	Actors:& Parent. \\\hline
+	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+		\item Parent logs into the system.
+		\item Parent chedules camper's absence.
+	\end{enumerate}\\\hline
+	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
+\end{tabular}
+\label{des:schedule absence}	
+\end{center}
+\end{table}
+
+%Empty example of use case table.
+
+
+%\begin{table}[!htb]
+%\begin{center}
+%\begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
+%	Name: & \\\hline
+%	Description: & \\\hline
+%	Related Requirements:& \\\hline
+%	Preconditions:& \\\hline
+%	Successful end condition:& \\\hline
+%	Failed end condition:& \\\hline
+%	Actors:& \\\hline
+%	Basic Flow of Events: & \begin{enumerate}[topsep=0pt]
+%		\item $\cdot$
+%	\end{enumerate}\\\hline
+%	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
+%\end{tabular}
+%\label{des:}	
+%\end{center}
+%\end{table}
 
 
 \end{document}

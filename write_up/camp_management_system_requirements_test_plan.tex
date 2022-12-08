@@ -55,7 +55,24 @@
 
 \section*{Test Plan}
 
-This is the Test Plan for the Camp Management System provided. Since there are 13 usecases, we have opted to only write test plans for eight of them; two by each group member. All relevant information about the usecases can be see in \cref{appendix:camp_sys}.
+This is the Test Plan for the Camp Management System provided. Since there are 13 usecases, we have opted to only write test plans for eight of them; two by each group member. All relevant information about the usecases can be see in \cref{appendix:camp_sys}, and to increase readability the summary for each test case explains how it is related to the requirement and there is a link to the relevant use case/requirement(s).
+
+\subsection*{Introduction}
+The Camp Management System aims to serve as the connecting force that organizes how counselors, parents, and campers communicate information. The main structure of the system can be boiled down into four requirements:
+\begin{enumerate}
+	\item A way to track attendance,
+	\item View Camper information,
+	\item Create and view schedule, and
+	\item Send a message to parents.
+\end{enumerate}
+The small subset of testing we show here will all be done using Functional Black-Box testing. That is, only testing that the the transformation of ``Input $\mapsto$ Output" is correct. The main testing techniques used are:
+\begin{enumerate}
+	\item Equivalence Partitioning (TC03: \cref{TC03}, TC04: \cref{TC04}, TC05: \cref{TC05}, TC06: \cref{TC06}, TC07: \cref{TC07}, TC08: \cref{TC08}),
+	\item Boundary Value Analysis (TC04: \cref{TC04}, TC05: \cref{TC05}, TC06: \cref{TC06}),
+	\item Decision Table Testing (TC01: \cref{TC01}, TC02: \cref{TC02}, TC06: \cref{TC06})
+	\item State Transition Testing (TC04: \cref{TC04}), and
+	\item Error Guessing  (TC03: \cref{TC03}, TC05: \cref{TC05}, TC06: \cref{TC06}, TC08: \cref{TC08}).
+\end{enumerate}
 
 % add intro, objectives, features, technique
 
@@ -68,11 +85,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC01}
+\label{TC01}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC01\\\hline
 	Name: & Message Camp \\\hline
 	Author: & Fletcher Phillips\\\hline
-	Summary: &  \\\hline
+	Summary: &  Parents must be able to message the camp system through three routes: Text, Email, and an In-app messaging system. These all need to be tested individually.\\\hline
 	Related \hspace{5em} Requirements:& Message Camp (\cref{des:message camp}); \hyperlink{Req4}{Req 4} \\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt]
 		\item Parent has a device to send a message (text, email, in-app messaging).
@@ -86,7 +105,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Test Data & 
 \end{tabular}
-\label{TC01}	
 \end{center}
 \end{table}
 
@@ -104,11 +122,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC02}
+\label{TC02}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC02\\\hline
 	Name: & Message Parent \\\hline
 	Author: & Fletcher Phillips\\\hline
-	Summary: &  \\\hline
+	Summary: &  The camp system must be able to message the parents through three routes: Text, Email, and an In-app messaging system. These routes are how the parent receives the message. All messaging is done through the system. These all need to be tested individually.\\\hline
 	Related \hspace{5em} & Message Parent (\cref{des:message parent}); \hyperlink{Req4}{Req 4} \\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Parent's contact information is stored.
@@ -121,7 +141,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Test Data &
 \end{tabular}
-\label{TC02}	
 \end{center}
 \end{table}
 
@@ -129,9 +148,9 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 \begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
 	\hline
 	Test Case \# & Messaging System & Expected Result & Summary\\\hline
-	TC02-01 & Messaging system: text & Text message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via text.\vspace*{1em}\\\hline
-	TC02-02 & Messaging system: email & Email mesage received by counselor osr staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via email. \vspace*{1em}\\	\hline
-	TC02-03 & Message system: in-app messaging & In-app messaging message is received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
+	TC02-01 & Text & Text message received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via text.\vspace*{1em}\\\hline
+	TC02-02 & Email & Email mesage received by counselor osr staff member and a confirmation receipt is received. & Verifies the camp staff member receives a parent's message via email. \vspace*{1em}\\	\hline
+	TC02-03 & In-app messaging & In-app messaging message is received by counselor or staff member and a confirmation receipt is received. & Verifies the camp staff member.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
 \clearpage
@@ -144,11 +163,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC03}
+\label{TC03}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC03\\\hline
 	Name: & Search Campers Test \\\hline
 	Author: & Megan Steinmasel\\\hline
-	Summary: &  \\\hline
+	Summary: & Given the search functionality in the system, it must be searchable for any components that make up a campers or parents name, returning entries that are related. \\\hline
 	Related \hspace{5em} Requirements:& Search Campers (\cref{des:search campers}); \hyperlink{Req2}{Req 2}, \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt]
 		\item Camper and parent information is submitted into the system.
@@ -161,7 +182,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Test Data & Camper: ``Max Johnson" with Parent: ``Jane Williams".
 \end{tabular}
-\label{TC03}	
 \end{center}
 \end{table}
 
@@ -185,11 +205,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC04}
+\label{TC04}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC04\\\hline
 	Name: & Sort Campers \\\hline
 	Author: & Megan Steinmasel\\\hline
-	Summary: &  \\\hline
+	Summary: & Given the sorting functionality in the system, it must be diviable for any components that make up a camper's characteristics: name, allergies, camp attending, payment/account balance, age. \\\hline
 	Related \hspace{5em} Requirements:& Sort Campers (\cref{des:sort campers}); \hyperlink{Req3}{Req 3}, \hyperlink{Req4}{Req 4}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Camper and parent information (name, allergies, camp, account balance, age) is submitted into the system.
@@ -207,9 +229,9 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\hspace*{1cm} account balance $\rightarrow$ $\{$\$0, \$0.12, \$10$\}$\newline
 	\hspace*{1cm} age $\rightarrow$ $\{$7, 12, 17$\}$
 \end{tabular}
-\label{TC04}	
 \end{center}
 \end{table}
+
 
 \begin{center}
 \begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
@@ -232,11 +254,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC05}
+\label{TC05}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC05\\\hline
 	Name: & View Counselor Schedule \\\hline
 	Author: & William Jardee\\\hline
-	Summary: &  \\\hline
+	Summary: & Each counselor must be able to view their own schedule according to a given input of dates. This needs to be robust to any weird combination of dates and times requested and worked in the system. \\\hline
 	Related \hspace{5em} Requirements:& View Counselor Schedules (\cref{des:view counselor schedules}); \hyperlink{Req3}{Req 3}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt]
 		\item Request for counself schedules ifs valid at this time (i.e., necessary credentials have been tested).
@@ -254,7 +278,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 		\item Bailey: Works this week Wednesday 9pm-Thursday 10:30am and saturday-Tuesday 7am-5pm.
 	\end{itemize}
 \end{tabular}
-\label{TC05}	
 \end{center}
 \end{table}
 
@@ -279,11 +302,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC06}
+\label{TC06}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC06\\\hline
 	Name: & View Camper Schedules from Parent(s) View \\\hline
 	Author: & William Jardee\\\hline
-	Summary: &  \\\hline
+	Summary: & Parents need to be able to view a schedule that leverages the predictable schedule structure and thus is easy to understand. \\\hline
 	Related \hspace{5em} & View Camper Schedules from Parent(s) View (\cref{des:view camper schedules}); \hyperlink{Req3}{Req 3}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Parents must be logged in.
@@ -303,7 +328,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 		\item Dana: Does not have any children atending any upcoming camps; however, his data is on the record from previous camps.
 	\end{itemize}
 \end{tabular}
-\label{TC06}	
 \end{center}
 \end{table}
 
@@ -333,11 +357,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC07}
+\label{TC07}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC07\\\hline
 	Name: & Track Attendance \\\hline
 	Author: & Jacob Coleman\\\hline
-	Summary: &  \\\hline
+	Summary: & Counselors have the ability to update camper's attendance, and can't edit those who aren't in the system/on their schedule. \\\hline
 	Related \hspace{5em} & Track Attendance (\cref{des:track attendance}); \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Camper has been entered into the system.
@@ -355,7 +381,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 		\item Jimmy Smith: Camper who is currently absent.
 	\end{itemize}
 \end{tabular}
-\label{TC07}	
 \end{center}
 \end{table}
 
@@ -373,11 +398,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \begin{table}[H]
 \begin{center}
+\caption{TC08}
+\label{TC08}
 \begin{tabular}{p{0.20\linewidth}p{0.70\linewidth}}
 	ID: & TC08\\\hline
 	Name: & Schedule Absence \\\hline
 	Author: & Jacob Coleman\\\hline
-	Summary: &  \\\hline
+	Summary: & Parents can modify their camper's schedule fully automatically without need to contact any personal. \\\hline
 	Related \hspace{5em} Requirements:& Schedule Absence (\cref{des:schedule absence}); \hyperlink{Req1}{Req 1}\\\hline
 	Preconditions:& \begin{enumerate}[topsep=0pt] 
 		\item Parent is logged in.
@@ -396,7 +423,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 		\item Family 3: Has one child attending camp next week (Joseph Williams).
 	\end{itemize}
 \end{tabular}
-\label{TC08}	
 \end{center}
 \end{table}
 
@@ -423,6 +449,8 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 
 \appendix
 \section{Camp Management System}\label{appendix:camp_sys}
+To make cross referencing easier, the used requirement and usecases from the original ``Camp Management System Requirements Spec" have been copied here. Any hyperlinks will redirect you to the relevant requirements/usecase.
+
 \subsection{Requirements}
 
 \noindent\textit{\hypertarget{Req1}{Requirement 1}}: A way to track attendance.\vspace{0.5em}
@@ -437,6 +465,8 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 % Test Suite 1:  Messaging System
 
 \begin{table}[!htb]
+\caption{Usecase 1}
+\label{des:message camp}	
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Message Camp\\\hline
@@ -453,11 +483,13 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:message camp}	
 \end{center}
 \end{table}
 
+
 \begin{table}[!htb]
+\caption{Usecase 2}
+\label{des:message parent}
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Message Parent\\\hline
@@ -475,13 +507,14 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:message parent}	
 \end{center}
 \end{table}
 
 % Test Suite 2: View camper information
 
 \begin{table}[!htb]
+\caption{Usecase 3}
+\label{des:search campers}
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Search Campers \\\hline
@@ -501,11 +534,12 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 		\item System tells user there are no results for the term.	
 	\end{enumerate}
 \end{tabular}
-\label{des:search campers}	
 \end{center}
 \end{table}
 
 \begin{table}[!htb]
+\caption{Usecase 4}
+\label{des:sort campers}
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Sort Campers.\\\hline
@@ -522,13 +556,14 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:sort campers}	
 \end{center}
 \end{table}
 
 % Test Suite 3: Schedule
 
 \begin{table}[!htb]
+\caption{Usecase 5}
+\label{des:view counselor schedules}
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & View Counselor Schedule\\\hline
@@ -544,11 +579,12 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:view counselor schedules}	
 \end{center}
 \end{table}
 
 \begin{table}[!htb]
+\caption{Usecase 6}
+\label{des:view camper schedules}
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & View Camper Schedule(s) from Parent View.\\\hline
@@ -564,13 +600,14 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:view camper schedules}	
 \end{center}
 \end{table}
 
 % Test Suite 4: Attendance Tracking
 
 \begin{table}[!htb]
+\caption{Usecase 7}
+\label{des:track attendance}
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Track Attendance\\\hline
@@ -586,11 +623,12 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:track attendance}	
 \end{center}
 \end{table}
 
 \begin{table}[!htb]
+\caption{Usecase 8}
+\label{des:schedule absence}
 \begin{center}
 \begin{tabular}{p{0.30\linewidth}p{0.60\linewidth}}
 	Name: & Schedule absence.\\\hline
@@ -606,7 +644,6 @@ This is the Test Plan for the Camp Management System provided. Since there are 1
 	\end{enumerate}\\\hline
 	Extensions/Exceptional Flow of Events: & \vspace*{.25em}  N/A
 \end{tabular}
-\label{des:schedule absence}	
 \end{center}
 \end{table}
 

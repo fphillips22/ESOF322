@@ -35,11 +35,11 @@
 \newdimen\hfuzz
 
 
-%\usepackage{fontspec}
+\usepackage{fontspec}
 % Use this line to change the font of your file. If you have the Open Dyslexic v. 1 downloaded (bold-italic- bolditalics included), you can use this line. This font addresses Dyslexic people. 
 %\setmainfont{OpenDyslexic}
 % Use this line to change the font of your file. If you have the Atkinson Hyperlegible downloaded (bold-italic- bolditalics included), you can use this line. This font addresses sight-impaired peoples
- %\setmainfont{Atkinson Hyperlegible}
+% \setmainfont{Atkinson Hyperlegible}
 
 \begin{document}
 
@@ -55,15 +55,15 @@
 
 \section*{Test Plan}
 
-This is the Test Plan for the Camp Management System provided. Since there is thirteen usecases total, we have opted to write only eight test plans, two by each group member. All relevant information about the usecases can be seen in \cref{appendix:camp_sys}, and to increase readability, the summary for each test case explains how it is related to the requirement, and there is a link to the relevant use case/requirement(s).
+This is the Test Plan for the Camp Management System provided. Since there is thirteen usecases total, we have opted to write only eight test plans, two by each group member. All relevant information about the usecases can be seen in \cref{appendix:camp_sys}. To increase readability, the summary for each test case explains how it is related to the requirement, and there is a link to the relevant use case/requirement(s).
 
 \subsection*{Introduction}
 The Camp Management System aims to serve as the connecting force that organizes how counselors, parents, and campers communicate information. The main structure of the system can be boiled down into four requirements:
 \begin{enumerate}
-	\item a way to track attendance,
-	\item view Camper information,
-	\item create and view schedule, and
-	\item send a message to parents.
+	\item tracking attendance,
+	\item viewing Camper information,
+	\item creating and viewing schedules, and
+	\item sending messages between parents and the camp.
 \end{enumerate}
 The small subset of testing we show here will all be done using Functional Black-Box testing. That is, only testing that the transformation of ``Input $\mapsto$ Output" is correct. The main testing techniques used are:
 \begin{enumerate}
@@ -100,7 +100,7 @@ The small subset of testing we show here will all be done using Functional Black
 	Test Script/ Procedure: & \begin{enumerate}[topsep=0pt]
 		\item Choose a messaging system.
 		\item Create a message to send.
-		\item Sena d message.
+		\item Send a message.
 		\item Confirmation receipt is sent.
 	\end{enumerate}\\\hline
 	Test Data & 
@@ -189,12 +189,12 @@ The small subset of testing we show here will all be done using Functional Black
 \begin{longtable}{|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|p{0.22\linewidth}|}
 	\hline 
 	Test Case \# & Test Data & Expected Result & Summary\\\hline
-	TC03-01 & camper first name: ``Max" & Relevant camper is displayed & Verifies a valid camper's first name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
-	TC03-02 & camper last name: ``Johnson" & Relevant camper is displayed & Verifies a valid camper's last name is searchable, and their information is displayed correctly.\vspace*{1em}\\	\hline
-	TC03-03 & camper first and last name: ``Max Johnson" & Relevant camper is displayed & Verifies a valid camper's first and last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-01 & Camper first name: ``Max" & Relevant camper is displayed & Verifies a valid camper's first name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-02 & Camper last name: ``Johnson" & Relevant camper is displayed & Verifies a valid camper's last name is searchable, and their information is displayed correctly.\vspace*{1em}\\	\hline
+	TC03-03 & Camper first and last name: ``Max Johnson" & Relevant camper is displayed & Verifies a valid camper's first and last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
 	TC03-04 & Parent first name: ``Jane" & Relevant parent is displayed & Verifies a valid parent's first name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
 	TC03-05 & Parent last name: ``Williams" & Relevant parent is displayed & Verifies a valid parent's last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
-	TC03-06 & camper first and last name: ``Jane Williams" & Relevant parent is displayed & Verifies a valid parent's first and last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
+	TC03-06 & Camper first and last name: ``Jane Williams" & Relevant parent is displayed & Verifies a valid parent's first and last name is searchable, and their information is displayed correctly.\vspace*{1em}\\\hline
 	TC03-07 & First name: ``ffjbvl" & No campers/parents are displayed & Verifies an invalid first name displays no result.\vspace*{1em}\\\hline
 	TC03-08 & Last name: ``cfgkp" & No campers/parents are displayed & Verifies an invalid last name displays no result.\vspace*{1em}\\\hline
 	TC03-09 & First and last name: ``ffjbvl cfgkp" & No campers/parents are displayed & Verifies an invalid first or last name displays no result.\\\hline
@@ -297,7 +297,6 @@ The small subset of testing we show here will all be done using Functional Black
 	TC05-10 & Andrew: Monday of this week $\longrightarrow$ Friday of next week. Then, request a refresh of the page. & Weekly schedule view is displayed (of the correct two-week period). & Verifies query is preserved over a refresh.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
-\clearpage
 
 
 \begin{table}[H]
@@ -347,7 +346,6 @@ The small subset of testing we show here will all be done using Functional Black
 	TC06-10 & Dana; this week. & Notify that their child will not be attending next week. Presents next week child will be attending $\rightarrow$ not registered for upcoming camps, so offers a link to sign up for camp. & Verifies empty state and unique prompt to register for a camp.\vspace*{1em}\\\hline
 \end{longtable}
 \end{center}
-\clearpage
 
 
 %------------------------------------
